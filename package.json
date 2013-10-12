@@ -1,0 +1,8 @@
+{
+  "name": "transport-bug",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cmd-transport": "~0.3.0"
+  }
+}
