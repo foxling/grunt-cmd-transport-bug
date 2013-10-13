@@ -9,8 +9,21 @@ module.exports = function(grunt) {
       test: {
         files : [
           {
-              src : 'v/sub.js',
+              src : 'app/**/*',
               dest : 'build/'
+          }
+        ]
+      }
+    },
+
+    concat: {
+      main: {
+        options : {
+          include : 'relative'
+        },
+        files: [
+          {
+            'dist/app/app.js': ['build/app/app.js']
           }
         ]
       }
@@ -19,5 +32,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-cmd-transport');
-  grunt.registerTask('test', ['transport']);
+  grunt.loadNpmTasks('grunt-cmd-concat');
+  grunt.registerTask('test', ['transport', 'concat']);
 };

@@ -1,0 +1,1 @@
+define("app/view/view", [], function(require) {});
